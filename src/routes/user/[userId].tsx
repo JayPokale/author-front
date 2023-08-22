@@ -1,11 +1,11 @@
 import { createSignal } from "solid-js";
 import { useLocation } from "solid-start";
 import Navbar from "~/components/Navbar";
-import OtherUserPosts from "~/components/UserProfile/OtherUser/OtherUserPosts";
-import OtherUserStats from "~/components/UserProfile/OtherUser/OtherUserStats";
+import UserPosts from "~/components/UserProfile/UserUserPosts";
+import UserStats from "~/components/UserProfile/UserUserStats";
 import { client } from "~/utils/client";
 
-const OtherUser = () => {
+const GetUserFromId = () => {
   const userId = useLocation().pathname.slice(6);
   const [userData, setUserData] = createSignal<any>();
   const [userPosts, setUserPosts] = createSignal<any>();
@@ -13,7 +13,7 @@ const OtherUser = () => {
 
   (async () => {
     const [userResponse, postsResponse]: any[] = await Promise.all([
-      client.user.getTargetedUserData.query({ userId }),
+      client.user.getTargetedUserDataFromId.query({ userId }),
       client.post.getTargetedUserPosts.query({
         userId,
         start: 0,
@@ -38,18 +38,18 @@ const OtherUser = () => {
     <>
       <Navbar />
       <main class="w-full bg-gray-50 min-h-[calc(100vh-48px)] flex flex-col md:flex-row md:justify-center gap-4 px-2 py-4">
-        {userData() ? <OtherUserStats user={userData()} /> : <OtherUserStats />}
+        {userData() ? <UserStats user={userData()} /> : <UserStats />}
         {userData() && userPosts() ? (
-          <OtherUserPosts
+          <UserPosts
             countPosts={userData()?.countposts}
             posts={userPosts()}
           />
         ) : (
-          <OtherUserPosts />
+          <UserPosts />
         )}
       </main>
     </>
   );
 };
 
-export default OtherUser;
+export default GetUserFromId;

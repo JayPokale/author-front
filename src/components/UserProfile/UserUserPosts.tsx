@@ -4,7 +4,7 @@ import { useLocation } from "solid-start";
 import { format } from "timeago.js";
 import { client } from "~/utils/client";
 
-const OtherUserPosts = (props: any) => {
+const UserPosts = (props: any) => {
   const userId = useLocation().pathname.slice(6);
   const [posts, setPosts] = createSignal(props.posts);
   const [postsLoading, setPostsLoading] = createSignal(false);
@@ -73,4 +73,4 @@ const OtherUserPosts = (props: any) => {
   );
 };
 
-export default OtherUserPosts;
+export default UserPosts;

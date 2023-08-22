@@ -298,7 +298,7 @@ export const userRouter = router({
       }
     }),
 
-  getTargetedUserData: procedure
+  getTargetedUserDataFromId: procedure
     .input(z.object({ userId: z.string() }))
     .query(async ({ input }) => {
       try {
