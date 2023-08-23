@@ -61,7 +61,7 @@ const postRouter = router({
       }
     }),
 
-  getTargetedUserPosts: procedure
+  getTargetedUserPostsFromId: procedure
     .input(z.object({ userId: z.string(), start: z.number(), end: z.number() }))
     .query(async ({ input }) => {
       try {

@@ -17,8 +17,10 @@ export const userRouter = router({
       })
     )
     .query(async ({ input }) => {
-      const { username, password } = input;
       try {
+        let { username, password } = input;
+        username = username.toLowerCase();
+
         const thisUser = await userModel.findOne(
           { username },
           {
@@ -106,8 +108,10 @@ export const userRouter = router({
       })
     )
     .query(async ({ input }) => {
-      const { name, username, email, password } = input;
       try {
+        let { name, username, email, password } = input;
+        username = username.toLowerCase();
+
         if (await userModel.exists({ email })) {
           return { msg: "Email Already Exists", success: false, error: false };
         }
