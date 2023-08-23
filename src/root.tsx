@@ -9,8 +9,6 @@ import {
   Routes,
   Scripts,
   Title,
-  useLocation,
-  useNavigate,
 } from "solid-start";
 import "./root.css";
 import { Toaster } from "solid-toast";
@@ -21,8 +19,6 @@ export const [loadingState, setLoadingState] = createSignal<boolean>(false);
 export const [User, setUser] = createSignal<any>(null);
 
 export default function Root() {
-  const navigate = useNavigate();
-  const location = useLocation();
 
   createEffect(async () => {
     const token = localStorage.getItem("token");
