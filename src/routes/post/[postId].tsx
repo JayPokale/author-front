@@ -13,20 +13,20 @@ export function routeData() {
     return {
       success: result.success,
       html: result.success ? (
-        <div class="max-w-screen-2xl mx-auto flex justify-center">
+        <article class="max-w-screen-2xl mx-auto flex justify-center">
           <div class="w-full max-w-2xl">
             <PostContent post={result.post} />
           </div>
           <div class="w-80 top-14 sticky h-max hidden lg:block">
             <PostAuthor user={result.post.user_id} />
           </div>
-        </div>
+        </article>
       ) : (
-        <div class="w-full mx-auto bg-gray-50 min-h-[calc(100vh-48px)]">
+        <article class="w-full mx-auto bg-gray-50 min-h-[calc(100vh-48px)]">
           <div class="p-12 text-2xl text-gray-400 font-semibold italic flex justify-center gap-4">
             <p>Post not found</p>
           </div>
-        </div>
+        </article>
       ),
     };
   });

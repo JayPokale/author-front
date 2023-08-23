@@ -20,6 +20,11 @@ export const [loadingState, setLoadingState] = createSignal<boolean>(false);
 export const [User, setUser] = createSignal<any>(null);
 
 export default function Root() {
+  const location = useLocation();
+  createEffect(() => {
+    if (!location.pathname.startsWith("/post/"))
+      document.getElementsByTagName("article")?.[0]?.remove();
+  });
 
   createEffect(async () => {
     const token = localStorage.getItem("token");
