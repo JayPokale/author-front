@@ -3,6 +3,7 @@ import { HttpStatusCode } from "solid-start/server";
 import Navbar from "~/components/Navbar";
 import PostAuthor from "~/components/PostComponents/PostAuthor";
 import PostContent from "~/components/PostComponents/PostContent";
+import { setLoadingState } from "~/root";
 import { client } from "~/utils/client";
 
 export function routeData() {
@@ -33,6 +34,7 @@ export function routeData() {
 
 const Article = () => {
   const post: any = useRouteData();
+  setLoadingState(false);
 
   return (
     <>

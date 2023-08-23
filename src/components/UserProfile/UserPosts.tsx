@@ -11,7 +11,7 @@ const UserPosts = (props: any) => {
 
   const loadPosts = async () => {
     setPostsLoading(true);
-    const data: any = await client.post.getTargetedUserPosts.query({
+    const data: any = await client.post.getTargetedUserPostsFromId.query({
       userId,
       start: posts().length,
       end: posts().length + 10,

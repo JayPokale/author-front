@@ -9,6 +9,7 @@ import {
   Routes,
   Scripts,
   Title,
+  useLocation,
 } from "solid-start";
 import "./root.css";
 import { Toaster } from "solid-toast";

@@ -1,9 +1,13 @@
 import { createEffect, createSignal } from "solid-js";
 import { A } from "solid-start";
+import { User } from "~/root";
 
 const HomePage = () => {
   const [i, setI] = createSignal(0);
   const [windowActive, setWindowActive] = createSignal(true);
+  const [curUser, setCurUser] = createSignal<any>();
+
+  createEffect(() => setCurUser(User()));
 
   createEffect(() => {
     window.addEventListener("focus", () => {
@@ -83,7 +87,7 @@ const HomePage = () => {
             Create Post
           </button>
         </A>
-        <A href="/profile">
+        <A href={`/user/${curUser()?.userId}`}>
           <button
             class="w-60 py-2 rounded-lg bg-white"
             style={{ "box-shadow": "0 4px 14px rgb(0 0 0 / 10%)" }}

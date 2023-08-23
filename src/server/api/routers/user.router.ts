@@ -112,7 +112,7 @@ export const userRouter = router({
       try {
         let { name, username, email, password } = input;
         username = username.toLowerCase().trim();
-        password = password.trim()
+        password = password.trim();
 
         if (await userModel.exists({ email })) {
           return { msg: "Email Already Exists", success: false, error: false };

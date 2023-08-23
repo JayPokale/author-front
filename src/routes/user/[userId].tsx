@@ -1,8 +1,8 @@
 import { createEffect, createSignal } from "solid-js";
 import { useParams } from "solid-start";
 import Navbar from "~/components/Navbar";
-import UserPosts from "~/components/UserProfile/UserUserPosts";
-import UserStats from "~/components/UserProfile/UserUserStats";
+import UserPosts from "~/components/UserProfile/UserPosts";
+import UserStats from "~/components/UserProfile/UserStats";
 import { client } from "~/utils/client";
 
 const GetUserFromId = () => {
