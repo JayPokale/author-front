@@ -1,9 +1,9 @@
+import { Suspense } from "solid-js";
 import { Title, createRouteData, useParams, useRouteData } from "solid-start";
 import { HttpStatusCode } from "solid-start/server";
 import Navbar from "~/components/Navbar";
 import PostAuthor from "~/components/PostComponents/PostAuthor";
 import PostContent from "~/components/PostComponents/PostContent";
-import { setLoadingState } from "~/root";
 import { client } from "~/utils/client";
 
 export function routeData() {
@@ -34,14 +34,23 @@ export function routeData() {
 
 const Article = () => {
   const post: any = useRouteData();
-  setLoadingState(false);
 
   return (
     <>
-      <Navbar />
-      <Title>Post</Title>
-      <HttpStatusCode code={post()?.success ? 200 : 404} />
-      {post()?.html}
+      <Suspense
+        fallback={
+          <article class="w-full mx-auto bg-gray-50 min-h-[calc(100vh-48px)]">
+            <div class="p-12 text-2xl text-gray-400 font-semibold italic flex justify-center gap-4">
+              <p>Loading...</p>
+            </div>
+          </article>
+        }
+      >
+        <Navbar />
+        <Title>Post</Title>
+        <HttpStatusCode code={post()?.success ? 200 : 404} />
+        {post()?.html}
+      </Suspense>
     </>
   );
 };

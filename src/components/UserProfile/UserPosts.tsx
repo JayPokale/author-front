@@ -2,7 +2,6 @@ import { A } from "@solidjs/router";
 import { For, createSignal } from "solid-js";
 import { useLocation } from "solid-start";
 import { format } from "timeago.js";
-import { setLoadingState } from "~/root";
 import { client } from "~/utils/client";
 
 const UserPosts = (props: any) => {
@@ -42,7 +41,6 @@ const UserPosts = (props: any) => {
               <div class="w-full py-2">
                 <A
                   href={`/post/${post.postId}`}
-                  onClick={() => setLoadingState(true)}
                   class="w-full p-4 flex justify-between items-center cursor-pointer bg-gray-100/50 hover:bg-gray-100 rounded-md"
                 >
                   <h3 class="w-3/4 text-ellipsis line-clamp-1">{post.title}</h3>
