@@ -1,5 +1,6 @@
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
 import { format } from "timeago.js";
+import "./Post.css";
 
 const PostContent = (props: any) => {
   const { post } = props;
@@ -34,7 +35,7 @@ const PostContent = (props: any) => {
           {format(post?.createdAt)}
         </p>
         <div
-          class="text-justify space-y-4 py-4 text-lg"
+          class="text-justify space-y-4 py-4 text-lg ql-container"
           style={{ "font-family": "Inter" }}
           innerHTML={html}
         />
