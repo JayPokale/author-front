@@ -90,6 +90,11 @@ const Navbar = () => {
                     Profile
                   </li>
                 </A>
+                <A href={`${import.meta.env.VITE_CMS_URI}/write`}>
+                  <li class="px-4 py-2 rounded-md hover:text-black cursor-pointer transition-colors">
+                    Create Post
+                  </li>
+                </A>
                 <A href="/edit/profile">
                   <li
                     class={`px-4 py-2 rounded-md hover:text-black cursor-pointer transition-colors ${
