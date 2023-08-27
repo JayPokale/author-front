@@ -17,7 +17,7 @@ const UserPosts = (props: any) => {
       start: posts().length,
       end: posts().length + 10,
     });
-    if (data.success) setPosts((prev) => prev.concat(data.posts));
+    if (data?.success) setPosts((prev) => prev.concat(data?.posts));
     setPostsLoading(true);
   };
 
