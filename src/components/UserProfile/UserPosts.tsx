@@ -2,6 +2,7 @@ import { A } from "@solidjs/router";
 import { For, createSignal } from "solid-js";
 import { useLocation } from "solid-start";
 import { format } from "timeago.js";
+import { User } from "~/root";
 import { client } from "~/utils/client";
 
 const UserPosts = (props: any) => {
@@ -29,6 +30,14 @@ const UserPosts = (props: any) => {
     >
       <div class="flex gap-4 cursor-default">
         <p class="py-2 px-12 rounded-md bg-gray-100">Posts</p>
+        {userId === User()?.userId && (
+          <A
+            href={`${import.meta.env.VITE_CMS_URI}`}
+            class="py-2 px-12 rounded-md cursor-pointer hover:bg-gray-100"
+          >
+            Edit Posts
+          </A>
+        )}
       </div>
       <div class="flex flex-col">
         {props.countPosts === 0 ? (
