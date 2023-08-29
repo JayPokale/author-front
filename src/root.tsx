@@ -50,6 +50,21 @@ export default function Root() {
         <Title>AuthorsLog</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script
+          defer
+          src={`https://www.googletagmanager.com/gtag/js?id=${
+            import.meta.env.VITE_GOOGLE_ANALYTICS
+          }`}
+        />
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
+          `}
+        </script>
       </Head>
       <Body>
         <Suspense>
