@@ -14,6 +14,7 @@ import {
 import "./root.css";
 import { Toaster } from "solid-toast";
 import { client } from "./utils/client";
+import { pageview } from "./utils/gtag";
 
 export const [loadingState, setLoadingState] = createSignal<boolean>(false);
 export const [User, setUser] = createSignal<any>(null);
@@ -21,6 +22,7 @@ export const [User, setUser] = createSignal<any>(null);
 export default function Root() {
   const location = useLocation();
   createEffect(() => {
+    pageview(location.pathname);
     if (!location.pathname.startsWith("/post/"))
       document.getElementsByTagName("article")?.[0]?.remove();
   });
