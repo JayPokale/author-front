@@ -18,7 +18,6 @@ const Footer = () => {
               data-prefix="fab"
               data-icon="facebook-f"
               class="w-2.5"
-              role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
             >
@@ -34,7 +33,6 @@ const Footer = () => {
               data-prefix="fab"
               data-icon="twitter"
               class="w-4"
-              role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -53,7 +51,6 @@ const Footer = () => {
               data-prefix="fab"
               data-icon="instagram"
               class="w-3.5"
-              role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
@@ -68,7 +65,6 @@ const Footer = () => {
               aria-hidden="true"
               data-prefix="fab"
               data-icon="pinterest"
-              role="img"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -84,51 +80,50 @@ const Footer = () => {
       <div class="max-w-6xl mx-auto px-4 py-10 text-center xs:text-left">
         <div class="grid grid-1 xs:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h6 class="uppercase font-semibold mb-4 flex items-center justify-center xs:justify-start">
+            <p class="uppercase font-semibold mb-4 flex items-center justify-center xs:justify-start">
               AuthorsLog
-            </h6>
-            <h6>
+            </p>
+            <p>
               Introducing a modern
               <br />
               way of blogging
-            </h6>
+            </p>
           </div>
           <div>
-            <h6 class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
+            <p class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
               Useful Links
-            </h6>
+            </p>
             <A href="/post/write" class="text-gray-600">
-              <h6 class="mb-4 cursor-pointer">Write Post</h6>
+              <p class="mb-4 cursor-pointer">Write Post</p>
             </A>
             <A href="/Explore" class="text-gray-600">
-              <h6 class="mb-4 cursor-pointer">Explore</h6>
+              <p class="mb-4 cursor-pointer">Explore</p>
             </A>
           </div>
           <div>
-            <h6 class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
+            <p class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
               Legal
-            </h6>
+            </p>
             <A href="/disclaimer" class="text-gray-600">
-              <h6 class="mb-4 cursor-pointer">Disclaimer</h6>
+              <p class="mb-4 cursor-pointer">Disclaimer</p>
             </A>
             <A href="/terms" class="text-gray-600">
-              <h6 class="mb-4 cursor-pointer">Terms & Conditions</h6>
+              <p class="mb-4 cursor-pointer">Terms & Conditions</p>
             </A>
             <A href="/privacy" class="text-gray-600">
-              <h6 class="mb-4 cursor-pointer">Privacy Policy</h6>
+              <p class="mb-4 cursor-pointer">Privacy Policy</p>
             </A>
           </div>
           <div>
-            <h6 class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
+            <p class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
               Contact
-            </h6>
-            <h6 class="flex items-center justify-center xs:justify-start mb-4">
+            </p>
+            <p class="flex items-center justify-center xs:justify-start mb-4">
               <svg
                 aria-hidden="true"
                 data-prefix="fas"
                 data-icon="home"
                 class="w-4 mr-4"
-                role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
               >
@@ -138,14 +133,13 @@ const Footer = () => {
                 />
               </svg>
               Nagpur, India
-            </h6>
-            <h6 class="flex items-center justify-center xs:justify-start mb-4">
+            </p>
+            <p class="flex items-center justify-center xs:justify-start mb-4">
               <svg
                 aria-hidden="true"
                 data-prefix="fas"
                 data-icon="envelope"
                 class="w-4 mr-4"
-                role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
               >
@@ -155,7 +149,7 @@ const Footer = () => {
                 />
               </svg>
               dare2solve@gmail.com
-            </h6>
+            </p>
             <div class="flex justify-center items-center xs:justify-start py-1 mb-4">
               <a
                 href="https://www.facebook.com/DareAndSolve"
@@ -166,7 +160,6 @@ const Footer = () => {
                   data-prefix="fab"
                   data-icon="facebook-f"
                   class="w-2.5"
-                  role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 320 512"
                 >
@@ -185,7 +178,6 @@ const Footer = () => {
                   data-prefix="fab"
                   data-icon="twitter"
                   class="w-4"
-                  role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
                 >
@@ -201,7 +193,6 @@ const Footer = () => {
                   data-prefix="fab"
                   data-icon="google"
                   class="w-3.5"
-                  role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 488 512"
                 >
@@ -220,7 +211,6 @@ const Footer = () => {
                   data-prefix="fab"
                   data-icon="instagram"
                   class="w-3.5"
-                  role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
