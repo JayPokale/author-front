@@ -67,6 +67,11 @@ export default function Root() {
             gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
           `}
         </script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4594992880793314"
+          crossorigin="anonymous"
+        />
       </Head>
       <Body>
         <Suspense>
