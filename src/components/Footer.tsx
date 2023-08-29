@@ -1,4 +1,5 @@
 import { A } from "solid-start";
+import { User } from "~/root";
 
 const Footer = () => {
   return (
@@ -93,26 +94,36 @@ const Footer = () => {
             <p class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
               Useful Links
             </p>
-            <A href="/post/write" class="text-gray-600">
-              <p class="mb-4 cursor-pointer">Write Post</p>
-            </A>
-            <A href="/Explore" class="text-gray-600">
-              <p class="mb-4 cursor-pointer">Explore</p>
-            </A>
+            <p class="mb-4">
+              <A href="/post/write" class="text-gray-600">
+                Write Post
+              </A>
+            </p>
+            <p class="mb-4">
+              <A href={`/user/${User()?.userId}`} class="text-gray-600">
+                Profile
+              </A>
+            </p>
           </div>
           <div>
             <p class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
               Legal
             </p>
-            <A href="/disclaimer" class="text-gray-600">
-              <p class="mb-4 cursor-pointer">Disclaimer</p>
-            </A>
-            <A href="/terms" class="text-gray-600">
-              <p class="mb-4 cursor-pointer">Terms & Conditions</p>
-            </A>
-            <A href="/privacy" class="text-gray-600">
-              <p class="mb-4 cursor-pointer">Privacy Policy</p>
-            </A>
+            <p class="mb-4">
+              <A href="/disclaimer" class="text-gray-600">
+                Disclaimer
+              </A>
+            </p>
+            <p class="mb-4">
+              <A href="/terms" class="text-gray-600">
+                Terms & Conditions
+              </A>
+            </p>
+            <p class="mb-4">
+              <A href="/privacy" class="text-gray-600">
+                Privacy Policy
+              </A>
+            </p>
           </div>
           <div>
             <p class="uppercase font-semibold mb-4 flex justify-center xs:justify-start">
