@@ -1,3 +1,7 @@
+.ql-container img {
+  margin: 4px auto;
+}
+
 .ql-container h1 {
   font-size: 24px;
 }

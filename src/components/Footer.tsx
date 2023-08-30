@@ -95,12 +95,12 @@ const Footer = () => {
               Useful Links
             </p>
             <p class="mb-4">
-              <A href="/post/write" class="text-gray-600">
+              <A href="/p/write" class="text-gray-600">
                 Write Post
               </A>
             </p>
             <p class="mb-4">
-              <A href={`/user/${User()?.userId}`} class="text-gray-600">
+              <A href={`/u/${User()?.userId}`} class="text-gray-600">
                 Profile
               </A>
             </p>

@@ -87,7 +87,7 @@ const HomePage = () => {
             Create Post
           </button>
         </A>
-        <A href={`/user/${curUser()?.userId}`}>
+        <A href={`/u/${curUser()?.userId}`}>
           <button
             class="w-60 py-2 rounded-lg bg-white"
             style={{ "box-shadow": "0 4px 14px rgb(0 0 0 / 10%)" }}

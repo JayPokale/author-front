@@ -81,7 +81,7 @@ const Navbar = () => {
                     Home
                   </li>
                 </A>
-                <A href={`/user/${curUser()?.userId}`}>
+                <A href={`/u/${curUser()?.userId}`}>
                   <li
                     class={`px-4 py-2 rounded-md hover:text-black cursor-pointer transition-colors ${
                       location === "/profile" && "bg-gray-100 text-black"
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <li
                   class="px-4 py-2 rounded-md hover:text-black cursor-pointer transition-colors"
                   onclick={async () => {
-                    setLoadingState(true);
+                    setLoadingState((prev) => Math.max(1, prev + 1));
                     toast.promise(
                       new Promise(async (resolve, reject) => {
                         try {
@@ -140,11 +140,11 @@ const Navbar = () => {
                           localStorage.removeItem("token");
                           setUser(null);
                           navigate("/auth/login");
-                          setLoadingState(false);
+                          setLoadingState((prev) => prev - 1);
                           return val as string;
                         },
                         error: (val) => {
-                          setLoadingState(false);
+                          setLoadingState((prev) => prev - 1);
                           return val;
                         },
                       }
