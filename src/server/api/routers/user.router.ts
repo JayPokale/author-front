@@ -319,7 +319,6 @@ export const userRouter = router({
             profilePhoto: 1,
             socialLinks: 1,
             countPosts: 1,
-            countDrafts: 1,
           }
         );
         return user.blocked

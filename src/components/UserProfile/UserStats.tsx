@@ -27,12 +27,6 @@ const UserStats = (props: any) => {
                 <p class="font-semibold">{props.user?.countPosts}</p>
                 <p class="text-gray-600 font-medium">Posts</p>
               </div>
-              <div class="max-w-[176px] flex items-baseline gap-1">
-                <p class="text-black font-semibold">
-                  {props.user?.countDrafts}
-                </p>
-                <p class="text-gray-600 font-medium">Drafts</p>
-              </div>
             </div>
           </div>
           {props.user?.bio && (
