@@ -21,10 +21,6 @@ const PostAuthor = (props: any) => {
             <p class="font-semibold">{user?.countPosts}</p>
             <p class="text-gray-600 font-medium">Posts</p>
           </div>
-          <div class="max-w-[176px] flex items-baseline gap-1">
-            <p class="text-black font-semibold">{user?.countDrafts}</p>
-            <p class="text-gray-600 font-medium">Drafts</p>
-          </div>
         </div>
       </div>
       {user?.bio && <div class="text-gray-600">{user?.bio}</div>}

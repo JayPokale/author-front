@@ -40,7 +40,6 @@ export default function Root() {
           profilePhoto: res.profilePhoto,
           socialLinks: res.socialLinks,
           countPosts: res.countPosts,
-          countDrafts: res.countDrafts,
         });
       }
     }

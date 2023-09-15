@@ -33,34 +33,6 @@ const postRouter = router({
       }
     }),
 
-  getDraftPosts: procedure
-    .input(z.object({ token: z.string(), start: z.number(), end: z.number() }))
-    .query(async ({ input }) => {
-      try {
-        const { _id, jwtKey } = jwt.verify(
-          input.token,
-          import.meta.env.VITE_JWT_SECRET
-        ) as { _id: string; jwtKey: string };
-        const thisUser = await userModel.findById(_id, { _id: 0, jwtKey: 1 });
-        if (jwtKey !== thisUser.jwtKey) {
-          return { msg: "Not a valid user", success: false, error: false };
-        }
-
-        const user = await userModel
-          .findById(_id, { _id: 0, drafts: 1 })
-          .slice("drafts", [input.start, input.end + 1])
-          .populate({
-            path: "drafts",
-            model: postModel,
-            select: "title postId createdAt -_id",
-          });
-        return { drafts: user?.drafts, success: true, error: false };
-      } catch (error) {
-        console.log(error);
-        return { error };
-      }
-    }),
-
   getTargetedUserPostsFromId: procedure
     .input(z.object({ userId: z.string(), start: z.number(), end: z.number() }))
     .query(async ({ input }) => {
@@ -102,7 +74,7 @@ const postRouter = router({
             path: "user_id",
             model: userModel,
             select:
-              "name username blocked bio profilePhoto socialLinks countPosts countDrafts",
+              "name username blocked bio profilePhoto socialLinks countPosts",
           });
         if (!post || post.draft || post.user_id.blocked) {
           return { msg: "Post not found", success: false, error: false };

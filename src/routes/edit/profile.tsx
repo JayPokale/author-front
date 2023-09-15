@@ -104,7 +104,6 @@ const EditProfileInfo = () => {
             profilePhoto: result.preofilePhoto,
             socialLinks: result.socialLinks,
             countPosts: result.countPosts,
-            countDrafts: result.countDrafts,
           });
           resolve("Updated Successfully");
         } catch {

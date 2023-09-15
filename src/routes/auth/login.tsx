@@ -26,7 +26,6 @@ const login = () => {
               profilePhoto: res.profilePhoto,
               socialLinks: res.socialLinks,
               countPosts: res.countPosts,
-              countDrafts: res.countDrafts,
             });
             resolve("Login Successful");
           }

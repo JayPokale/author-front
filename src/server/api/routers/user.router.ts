@@ -35,7 +35,6 @@ export const userRouter = router({
             profilePhoto: 1,
             socialLinks: 1,
             countPosts: 1,
-            countDrafts: 1,
           }
         );
         if (thisUser && thisUser.blocked) {
@@ -54,7 +53,6 @@ export const userRouter = router({
             profilePhoto: thisUser.profilePhoto,
             socialLinks: thisUser.socialLinks,
             countPosts: thisUser.countPosts,
-            countDrafts: thisUser.countDrafts,
             token: jwt.sign(
               { _id: thisUser._id, jwtKey: thisUser.jwtKey },
               import.meta.env.VITE_JWT_SECRET
@@ -211,7 +209,6 @@ export const userRouter = router({
         profilePhoto: 1,
         socialLinks: 1,
         countPosts: 1,
-        countDrafts: 1,
       });
       if (thisUser && thisUser.blocked) {
         return {
@@ -231,7 +228,6 @@ export const userRouter = router({
         profilePhoto: thisUser.profilePhoto,
         socialLinks: thisUser.socialLinks,
         countPosts: thisUser.countPosts,
-        countDrafts: thisUser.countDrafts,
         success: true,
         error: false,
       };
@@ -282,7 +278,6 @@ export const userRouter = router({
               profilePhoto: 1,
               socialLinks: 1,
               countPosts: 1,
-              countDrafts: 1,
             },
           }
         );
@@ -294,7 +289,6 @@ export const userRouter = router({
           profilePhoto: updatedUser.profilePhoto,
           socialLinks: updatedUser.socialLinks,
           countPosts: updatedUser.countPosts,
-          countDrafts: updatedUser.countDrafts,
           success: true,
           error: false,
         };
