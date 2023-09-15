@@ -28,8 +28,6 @@ export default function Root() {
   });
 
   createEffect(async () => {
-    const sitemap = await client.sitemap.sitemap.query();
-
     const token = localStorage.getItem("token");
     if (token) {
       const res: any = await client.user.getUser.query(token);
@@ -53,6 +51,10 @@ export default function Root() {
         <Title>AuthorsLog</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta
+          name="google-site-verification"
+          content="NXkJYbvbpwPo5QDbzYHdetmKxNmQC4a8_5Sw7HwMU5g"
+        />
       </Head>
       <Body>
         <Suspense>
