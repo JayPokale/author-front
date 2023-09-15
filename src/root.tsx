@@ -28,6 +28,8 @@ export default function Root() {
   });
 
   createEffect(async () => {
+    const sitemap = await client.sitemap.sitemap.query();
+
     const token = localStorage.getItem("token");
     if (token) {
       const res: any = await client.user.getUser.query(token);
@@ -70,15 +72,15 @@ export default function Root() {
           {`window.onload = function() {
             var div = document.createElement("div");
 
-            var script1 = document.createElement("script");
-            script1.src = "https://www.googletagmanager.com/gtag/js?id=G-C4YE76G9VN";
+            // var script1 = document.createElement("script");
+            // script1.src = "https://www.googletagmanager.com/gtag/js?id=G-C4YE76G9VN";
             
             var script2 = document.createElement("script");
             script2.src =
               "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4594992880793314";
             script2.crossOrigin = "anonymous";
             
-            div.appendChild(script1);
+            // div.appendChild(script1);
             div.appendChild(script2);
             document.body.appendChild(div);
           }`}

@@ -63,7 +63,7 @@ const Navbar = () => {
                   curUser()?.profilePhoto ||
                   `${import.meta.env.VITE_MAIN_URI}/userNone.webp`
                 }
-                alt=""
+                alt={curUser()?.name ? curUser()?.name : "Profile Photo"}
                 class="object-cover"
               />
             </div>

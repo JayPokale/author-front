@@ -1,5 +1,0 @@
-Sitemap: https://domain.com/sitemap
-
-User-agent: *
-Allow: /*
-Disallow: /api/*
