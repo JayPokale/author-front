@@ -70,24 +70,11 @@ export default function Root() {
             </Routes>
           </ErrorBoundary>
         </Suspense>
-        <script>
-          {`window.onload = function() {
-            var div = document.createElement("div");
-
-            // var script1 = document.createElement("script");
-            // script1.src = "https://www.googletagmanager.com/gtag/js?id=G-C4YE76G9VN";
-            
-            var script2 = document.createElement("script");
-            script2.src =
-              "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4594992880793314";
-            script2.crossOrigin = "anonymous";
-            
-            // div.appendChild(script1);
-            div.appendChild(script2);
-            document.body.appendChild(div);
-          }`}
-        </script>
-        <script async>
+        <script
+          defer
+          src="https://www.googletagmanager.com/gtag/js?id=G-C4YE76G9VN"
+        />
+        <script defer>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -95,6 +82,11 @@ export default function Root() {
             gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
           `}
         </script>
+        <script
+          defer
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4594992880793314"
+        />
         <Scripts />
       </Body>
     </Html>
