@@ -55,6 +55,7 @@ export default function Root() {
           name="google-site-verification"
           content="NXkJYbvbpwPo5QDbzYHdetmKxNmQC4a8_5Sw7HwMU5g"
         />
+        <Meta name="google-adsense-account" content="ca-pub-4594992880793314" />
       </Head>
       <Body>
         <Suspense>
