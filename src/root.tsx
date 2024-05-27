@@ -7,7 +7,6 @@ import {
   Html,
   Meta,
   Routes,
-  Scripts,
   Title,
   useLocation,
 } from "solid-start";
@@ -71,24 +70,6 @@ export default function Root() {
             </Routes>
           </ErrorBoundary>
         </Suspense>
-        <script
-          defer
-          src="https://www.googletagmanager.com/gtag/js?id=G-C4YE76G9VN"
-        />
-        <script defer>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
-          `}
-        </script>
-        <script
-          defer
-          crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4594992880793314"
-        />
-        <Scripts />
       </Body>
     </Html>
   );
